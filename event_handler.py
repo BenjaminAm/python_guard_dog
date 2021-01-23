@@ -1,13 +1,17 @@
-import os
+import timeit
 from watchdog.events import PatternMatchingEventHandler, FileModifiedEvent
 from scan import scan_file
 
 
 def on_modified(event):
+    # start = timeit.default_timer()
     if not isinstance(event, FileModifiedEvent):
         return
     if event.src_path[-3:] == ".py":
         scan_file(event.src_path)
+        # end = timeit.default_timer()
+        # print("Event Source: " + event.src_path)
+        # print("Seconds: " + "{:8.6f}".format(end - start))
 
 
 def on_created(event):

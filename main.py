@@ -13,7 +13,7 @@ def register_plugins():
             import_module(module)  # import plugins so that they are registered by their decorators
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     args = parse_args(sys.argv[1:])
 
     register_plugins()

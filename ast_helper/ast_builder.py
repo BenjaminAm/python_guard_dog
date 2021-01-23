@@ -7,5 +7,3 @@ def build_ast(path):
         with open(path, 'r') as f:
             return ast.parse(f.read())
     raise IOError('Input needs to be a file. Path: ' + path)
-
-

@@ -1,6 +1,6 @@
 import types
 from .analyzer import Analyzer
-from .registered_plugins import registered_settings_plugins
+from .plugin_loader import registered_settings_plugins
 from vulnerability.vulnerability import Vulnerability
 from vulnerability.vulnerabilities_config import djdebug, djcsrfmidw, djsecmidw
 
